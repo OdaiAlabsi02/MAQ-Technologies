@@ -41,63 +41,69 @@ const Hero = () => {
       });
     }
   };
+
+  const scrollToServices = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  };
   
   return <motion.div className="relative w-full" initial="hidden" animate="visible" variants={containerVariants}>
-      <div className="banner-container bg-black relative overflow-hidden h-[50vh] sm:h-[60vh] md:h-[500px] lg:h-[550px] xl:h-[600px] w-full">
-        <div className="absolute inset-0 bg-black w-full">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
-            preload="metadata"
-            className={`w-full h-full object-cover opacity-70 grayscale ${isMobile ? 'object-right' : 'object-center'}`}
-            poster="/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png"
-          >
-            <source src="/lovable-uploads/video_1751292840840_1751292842546.mp4" type="video/mp4" />
-            {/* Fallback image if video fails to load */}
-            <img 
-              src="/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png" 
-              alt="WRLDS Technologies Connected People" 
-              className={`w-full h-full object-cover opacity-70 grayscale ${isMobile ? 'object-right' : 'object-center'}`} 
-            />
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-white"></div>
+      <div className="banner-container bg-gradient-to-r from-blue-900 to-purple-800 relative overflow-hidden h-[60vh] sm:h-[70vh] md:h-[600px] lg:h-[650px] xl:h-[700px] w-full">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-purple-800/90">
+          <img 
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80" 
+            alt="MAQ Technology Solutions" 
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/50 to-white"></div>
         </div>
         
-        <div className="banner-overlay bg-transparent pt-20 sm:pt-24 md:pt-32 w-full">
+        <div className="banner-overlay bg-transparent pt-24 sm:pt-28 md:pt-36 w-full">
           <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center h-full">
-            <motion.div className="w-full max-w-4xl text-center" variants={itemVariants}>
-              <motion.h1 className="banner-title text-white" variants={itemVariants}>The Future of Smart Textile Technology is here.</motion.h1>
-              <motion.p className="banner-subtitle text-gray-300 mt-4 sm:mt-6" variants={itemVariants}>
-                We integrate AI-powered textile sensors into clothing, footwear, and wearables.
+            <motion.div className="w-full max-w-5xl text-center" variants={itemVariants}>
+              <motion.h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6" variants={itemVariants}>
+                Transform Your Vision Into <span className="text-yellow-400">Digital Reality</span>
+              </motion.h1>
+              <motion.p className="text-xl sm:text-2xl text-gray-200 mt-4 sm:mt-6 max-w-3xl mx-auto" variants={itemVariants}>
+                MAQ is Dubai's premier technology consultant and development company, crafting innovative web and mobile solutions since 2025.
               </motion.p>
-              <motion.div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center items-center" variants={itemVariants}>
-                {/* Styled as a button but using an anchor tag for project navigation */}
+              <motion.div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-8 sm:mt-10 justify-center items-center" variants={itemVariants}>
                 <button 
-                  className="w-full sm:w-auto min-h-[44px] px-6 sm:px-8 py-3 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition-all shadow-lg hover:shadow-xl hover:shadow-gray-300/20 flex items-center justify-center group text-sm sm:text-base font-medium"
-                  onClick={e => {
-                    e.preventDefault();
-                    const projectsSection = document.getElementById('projects');
-                    if (projectsSection) {
-                      projectsSection.scrollIntoView({
-                        behavior: 'smooth'
-                      });
-                    }
-                  }}
+                  className="w-full sm:w-auto min-h-[48px] px-8 sm:px-10 py-4 bg-yellow-400 text-gray-900 rounded-lg hover:bg-yellow-300 transition-all shadow-lg hover:shadow-xl hover:shadow-yellow-400/20 flex items-center justify-center group text-base sm:text-lg font-semibold"
+                  onClick={scrollToServices}
                 >
-                  Explore Projects
-                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                  Our Services
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
                 
-                {/* Using the Button component from shadcn but with custom styling to match the explore button */}
                 <button 
-                  className="w-full sm:w-auto min-h-[44px] px-6 sm:px-8 py-3 bg-gray-700 text-white rounded-md hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl hover:shadow-gray-300/20 flex items-center justify-center group text-sm sm:text-base font-medium"
+                  className="w-full sm:w-auto min-h-[48px] px-8 sm:px-10 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all shadow-lg hover:shadow-xl flex items-center justify-center group text-base sm:text-lg font-semibold"
                   onClick={scrollToContact}
                 >
-                  Contact Us
-                  <MessageSquare className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
+                  Get Started
+                  <MessageSquare className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform" />
                 </button>
+              </motion.div>
+              
+              {/* Trust indicators */}
+              <motion.div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-gray-300" variants={itemVariants}>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-yellow-400">50+</div>
+                  <div className="text-sm">Projects Delivered</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-yellow-400">100%</div>
+                  <div className="text-sm">Client Satisfaction</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-yellow-400">24/7</div>
+                  <div className="text-sm">Support</div>
+                </div>
               </motion.div>
             </motion.div>
           </div>
@@ -105,31 +111,31 @@ const Hero = () => {
       </div>
       
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 mx-auto">
-        <motion.div className="mt-6 md:mt-8 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4" variants={containerVariants} initial="hidden" animate="visible" transition={{
+        <motion.div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8" variants={containerVariants} initial="hidden" animate="visible" transition={{
         delay: 0.6
       }}>
-          <motion.div className="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md" variants={itemVariants}>
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-100 flex items-center justify-center rounded-lg text-gray-500 mb-2 md:mb-3">
-              <Cpu className="w-5 h-5 md:w-6 md:h-6" />
+          <motion.div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" variants={itemVariants}>
+            <div className="w-12 h-12 md:w-14 md:h-14 bg-blue-100 flex items-center justify-center rounded-lg text-blue-600 mb-4">
+              <Code className="w-6 h-6 md:w-7 md:h-7" />
             </div>
-            <h3 className="text-base md:text-lg font-semibold mb-1 md:mb-2 text-gray-800">Smart Textiles</h3>
-            <p className="text-gray-600 text-xs md:text-sm">Intelligent fabric sensors that seamlessly integrate into clothing and footwear.</p>
+            <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-800">Web Development</h3>
+            <p className="text-gray-600 text-sm md:text-base">Custom web applications built with cutting-edge technologies for optimal performance and user experience.</p>
           </motion.div>
           
-          <motion.div className="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md" variants={itemVariants}>
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-100 flex items-center justify-center rounded-lg text-gray-500 mb-2 md:mb-3">
-              <Code className="w-5 h-5 md:w-6 md:h-6" />
+          <motion.div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" variants={itemVariants}>
+            <div className="w-12 h-12 md:w-14 md:h-14 bg-purple-100 flex items-center justify-center rounded-lg text-purple-600 mb-4">
+              <Cpu className="w-6 h-6 md:w-7 md:h-7" />
             </div>
-            <h3 className="text-base md:text-lg font-semibold mb-1 md:mb-2 text-gray-800">Adaptive AI</h3>
-            <p className="text-gray-600 text-xs md:text-sm">Industry-specific algorithms that transform textile sensor data into meaningful insights.</p>
+            <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-800">Mobile Apps</h3>
+            <p className="text-gray-600 text-sm md:text-base">Native and cross-platform mobile applications that deliver seamless experiences across all devices.</p>
           </motion.div>
           
-          <motion.div className="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md" variants={itemVariants}>
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-100 flex items-center justify-center rounded-lg text-gray-500 mb-2 md:mb-3">
-              <Layers className="w-5 h-5 md:w-6 md:h-6" />
+          <motion.div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" variants={itemVariants}>
+            <div className="w-12 h-12 md:w-14 md:h-14 bg-yellow-100 flex items-center justify-center rounded-lg text-yellow-600 mb-4">
+              <Layers className="w-6 h-6 md:w-7 md:h-7" />
             </div>
-            <h3 className="text-base md:text-lg font-semibold mb-1 md:mb-2 text-gray-800">Cross-Industry</h3>
-            <p className="text-gray-600 text-xs md:text-sm">Solutions for sports, military, healthcare, industrial, and professional environments.</p>
+            <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-800">Technology Consulting</h3>
+            <p className="text-gray-600 text-sm md:text-base">Strategic technology consulting to help businesses leverage digital solutions for growth and efficiency.</p>
           </motion.div>
         </motion.div>
       </div>

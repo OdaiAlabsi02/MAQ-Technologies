@@ -1,10 +1,13 @@
 
 import PageLayout from '@/components/PageLayout';
 import Hero from '@/components/Hero';
-import Features from '@/components/Features';
-import Projects from '@/components/Projects';
-import WhyWrlds from '@/components/WhyWrlds';
-import BlogPreview from '@/components/BlogPreview';
+import About from '@/components/About';
+import Vision from '@/components/Vision';
+import Goals from '@/components/Goals';
+import Mission from '@/components/Mission';
+import MAQProjects from '@/components/MAQProjects';
+import Services from '@/components/Services';
+import ContactUs from '@/components/ContactUs';
 import SEO from '@/components/SEO';
 import { useEffect } from 'react';
 
@@ -21,16 +24,19 @@ const Index = () => {
   return (
     <PageLayout>
       <SEO 
-        title="WRLDS - Smart Textile Technology" 
-        description="WRLDS Technologies: Pioneering smart engineering solutions with textile sensors for sports, safety, and performance monitoring."
+        title="MAQ - Technology Consulting & Development" 
+        description="MAQ is Dubai's premier technology consultant and development company, crafting innovative web and mobile solutions since 2025."
         imageUrl="/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
-        keywords={['smart textiles', 'wearable technology', 'textile sensors', 'sports tech', 'safety monitoring', 'performance analytics', 'manufacturing']}
+        keywords={['technology consulting', 'web development', 'mobile apps', 'digital transformation', 'Dubai', 'UAE', 'software development']}
       />
       <Hero />
-      <Features />
-      <WhyWrlds />
-      <Projects />
-      <BlogPreview />
+      <About />
+      <Vision />
+      <Goals />
+      <Mission />
+      <MAQProjects />
+      <Services />
+      <ContactUs />
     </PageLayout>
   );
 };
