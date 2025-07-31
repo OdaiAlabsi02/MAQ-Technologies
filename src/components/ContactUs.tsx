@@ -12,7 +12,6 @@ import {
   Calendar
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import emailjs from 'emailjs-com';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -69,31 +68,26 @@ const ContactUs = () => {
     
     setIsSubmitting(true);
     
-    try {
-      // EmailJS configuration
-      const EMAILJS_SERVICE_ID = "service_i3h66xg";
-      const EMAILJS_TEMPLATE_ID = "template_fgq53nh";
-      const EMAILJS_PUBLIC_KEY = "wQmcZvoOqTAhGnRZ3";
+                   try {
+       // Send email using mailto link (no template dependency)
       
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone,
-        company: formData.company,
-        service: formData.service,
-        budget: formData.budget,
-        timeline: formData.timeline,
-        message: formData.message,
-        to_name: 'MAQ Team',
-        reply_to: formData.email
-      };
-      
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_PUBLIC_KEY
-      );
+                    // Send email using mailto link (no template dependency)
+       const subject = `New Contact Form Submission from ${formData.name}`;
+       const body = `
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone || 'Not provided'}
+Company: ${formData.company || 'Not provided'}
+Service: ${formData.service || 'Not specified'}
+Budget: ${formData.budget || 'Not specified'}
+Timeline: ${formData.timeline || 'Not specified'}
+
+Message:
+${formData.message}
+       `.trim();
+       
+       const mailtoLink = `mailto:sales@garagat.ai?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+       window.open(mailtoLink);
       
       toast({
         title: "Success!",
@@ -128,21 +122,21 @@ const ContactUs = () => {
     {
       icon: Phone,
       title: "Phone",
-      content: "+971 4 123 4567",
+      content: "+971 58 571 5257",
       subtitle: "Call us directly",
       color: "blue"
     },
     {
       icon: Mail,
       title: "Email",
-      content: "info@maq.ae",
+      content: "sales@garagat.ai",
       subtitle: "Send us an email",
       color: "green"
     },
     {
       icon: MapPin,
       title: "Office",
-      content: "Dubai Internet City, Dubai, UAE",
+      content: "D1 - Dubai Digital Park, Dubai, UAE",
       subtitle: "Visit our office",
       color: "purple"
     },
@@ -398,7 +392,16 @@ const ContactUs = () => {
               <div className="text-center">
                 <MapPin className="w-12 h-12 text-gray-500 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-700 mb-2">Our Location</h3>
-                <p className="text-gray-600">Dubai Internet City<br />Dubai, UAE</p>
+                <p className="text-gray-600 mb-4">D1 - Dubai Digital Park<br />Dubai, UAE</p>
+                <a 
+                  href="https://www.google.com/maps/place/D1+-+Dubai+Digital+Park/@25.1192878,55.3737063,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f651c2438dc53:0xe6abcc1ea38a17f5!8m2!3d25.1192878!4d55.3762812!16s%2Fg%2F11fwblrczb?entry=ttu&g_ep=EgoyMDI1MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                >
+                  <MapPin className="w-4 h-4 mr-2" />
+                  View on Google Maps
+                </a>
               </div>
             </motion.div>
 
@@ -435,8 +438,8 @@ const ContactUs = () => {
               </div>
               <p className="text-red-800 mb-3">For critical system issues or urgent support:</p>
               <div className="space-y-2">
-                <p className="text-red-900 font-semibold">📞 +971 50 123 4567</p>
-                <p className="text-red-900 font-semibold">✉️ emergency@maq.ae</p>
+                <p className="text-red-900 font-semibold">📞 +971 58 571 5257</p>
+                <p className="text-red-900 font-semibold">✉️ sales@garagat.ai</p>
                 <p className="text-sm text-red-700">Available 24/7 for existing clients</p>
               </div>
             </motion.div>
@@ -446,14 +449,28 @@ const ContactUs = () => {
               className="grid grid-cols-2 gap-4"
               variants={itemVariants}
             >
-              <button className="bg-green-600 text-white p-4 rounded-xl hover:bg-green-700 transition-colors flex items-center justify-center">
-                <MessageSquare className="w-5 h-5 mr-2" />
-                WhatsApp
-              </button>
-              <button className="bg-blue-600 text-white p-4 rounded-xl hover:bg-blue-700 transition-colors flex items-center justify-center">
-                <Calendar className="w-5 h-5 mr-2" />
-                Book Meeting
-              </button>
+                             <button 
+                 onClick={() => {
+                   const subject = "New Project Inquiry";
+                   const body = `Hello MAQ Technologies,
+
+I'm interested in your services and would like to discuss a potential project.
+
+Please contact me to schedule a meeting.
+
+Best regards`;
+                   const mailtoLink = `mailto:sales@garagat.ai?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                   window.open(mailtoLink);
+                 }}
+                 className="bg-green-600 text-white p-4 rounded-xl hover:bg-green-700 transition-colors flex items-center justify-center"
+               >
+                 <MessageSquare className="w-5 h-5 mr-2" />
+                 Send Email
+               </button>
+               <button className="bg-blue-600 text-white p-4 rounded-xl hover:bg-blue-700 transition-colors flex items-center justify-center">
+                 <Calendar className="w-5 h-5 mr-2" />
+                 Book Meeting
+               </button>
             </motion.div>
           </motion.div>
         </div>

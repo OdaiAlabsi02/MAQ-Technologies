@@ -41,8 +41,8 @@ const Goals = () => {
     },
     {
       title: "Team Growth",
-      description: "Build a diverse team of 100+ technology experts",
-      target: "100+ Experts",
+      description: "Build a diverse team of 50+ technology experts",
+      target: "50+ Experts",
       timeline: "2027",
       icon: Users,
       color: "purple"

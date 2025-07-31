@@ -70,7 +70,7 @@ const Hero = () => {
                 Transform Your Vision Into <span className="text-yellow-400">Digital Reality</span>
               </motion.h1>
               <motion.p className="text-xl sm:text-2xl text-gray-200 mt-4 sm:mt-6 max-w-3xl mx-auto" variants={itemVariants}>
-                MAQ is Dubai's premier technology consultant and development company, crafting innovative web and mobile solutions since 2025.
+                MAQ Technologies is Dubai's premier technology consultant and development company, crafting innovative web, mobile, and AI solutions.
               </motion.p>
               <motion.div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-8 sm:mt-10 justify-center items-center" variants={itemVariants}>
                 <button 
@@ -118,24 +118,24 @@ const Hero = () => {
             <div className="w-12 h-12 md:w-14 md:h-14 bg-blue-100 flex items-center justify-center rounded-lg text-blue-600 mb-4">
               <Code className="w-6 h-6 md:w-7 md:h-7" />
             </div>
-            <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-800">Web Development</h3>
-            <p className="text-gray-600 text-sm md:text-base">Custom web applications built with cutting-edge technologies for optimal performance and user experience.</p>
+            <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-800">Full Stack Development</h3>
+            <p className="text-gray-600 text-sm md:text-base">End-to-end web and mobile application development with modern, scalable architectures.</p>
           </motion.div>
           
           <motion.div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" variants={itemVariants}>
             <div className="w-12 h-12 md:w-14 md:h-14 bg-purple-100 flex items-center justify-center rounded-lg text-purple-600 mb-4">
               <Cpu className="w-6 h-6 md:w-7 md:h-7" />
             </div>
-            <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-800">Mobile Apps</h3>
-            <p className="text-gray-600 text-sm md:text-base">Native and cross-platform mobile applications that deliver seamless experiences across all devices.</p>
+            <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-800">AI Solutions</h3>
+            <p className="text-gray-600 text-sm md:text-base">Intelligent automation and machine learning solutions to transform your business operations.</p>
           </motion.div>
           
           <motion.div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" variants={itemVariants}>
-            <div className="w-12 h-12 md:w-14 md:h-14 bg-yellow-100 flex items-center justify-center rounded-lg text-yellow-600 mb-4">
+            <div className="w-12 h-12 md:w-14 md:h-14 bg-green-100 flex items-center justify-center rounded-lg text-green-600 mb-4">
               <Layers className="w-6 h-6 md:w-7 md:h-7" />
             </div>
-            <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-800">Technology Consulting</h3>
-            <p className="text-gray-600 text-sm md:text-base">Strategic technology consulting to help businesses leverage digital solutions for growth and efficiency.</p>
+            <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-800">IT Consulting</h3>
+            <p className="text-gray-600 text-sm md:text-base">Strategic technology guidance and digital transformation to optimize your business infrastructure.</p>
           </motion.div>
         </motion.div>
       </div>

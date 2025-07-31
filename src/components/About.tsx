@@ -78,7 +78,7 @@ const About = () => {
               className="text-lg text-gray-600"
               variants={itemVariants}
             >
-              MAQ emerged as Dubai's premier technology consulting and development company, dedicated to transforming businesses through innovative digital solutions. Our expertise spans web development, mobile applications, and comprehensive technology consulting.
+              MAQ emerged as Dubai's premier technology consulting and development company, dedicated to transforming businesses through innovative digital solutions. Our expertise spans Full Stack Development, AI Solutions, and comprehensive technology consulting.
             </motion.p>
             <motion.p 
               className="text-lg text-gray-600"
@@ -101,7 +101,7 @@ const About = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Users className="w-6 h-6 text-blue-600" />
-                <span className="text-gray-700 font-medium">50+ Projects</span>
+                <span className="text-gray-700 font-medium">3+ Project</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Award className="w-6 h-6 text-blue-600" />
@@ -131,12 +131,12 @@ const About = () => {
               variants={itemVariants}
             >
               <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80"
+                src="https://media.licdn.com/dms/image/v2/C4E03AQECigXZ0YWIhQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1646385642491?e=1756944000&v=beta&t=zVw45K1wll-aKlwi3fIxc-8HfbPeHPKlC82tL78rILk"
                 alt="CEO"
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
               />
-              <h4 className="text-xl font-bold text-gray-900 mb-2">Ahmed Al-Rashid</h4>
-              <p className="text-blue-600 font-medium mb-3">Chief Executive Officer</p>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Ayman Al-Maqusi</h4>
+              <p className="text-blue-600 font-medium mb-3">Founder & Chief Executive Officer</p>
               <p className="text-gray-600 text-sm">Leading MAQ's vision with 15+ years of experience in technology innovation and business strategy.</p>
             </motion.div>
 
@@ -145,12 +145,12 @@ const About = () => {
               variants={itemVariants}
             >
               <img
-                src="https://images.unsplash.com/photo-1494790108755-2616b66639ff?auto=format&fit=crop&w=300&q=80"
+                src="https://media.licdn.com/dms/image/v2/C5603AQGxgu22bgwUpw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516551009346?e=1756944000&v=beta&t=XuiQYuDO3E1XZVfUGwXVvyjcsx599D2rh0iuhZyo41g"
                 alt="CTO"
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
               />
-              <h4 className="text-xl font-bold text-gray-900 mb-2">Sarah Johnson</h4>
-              <p className="text-blue-600 font-medium mb-3">Chief Technology Officer</p>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Maher Asha</h4>
+              <p className="text-blue-600 font-medium mb-3">Co-Founder & Chief Technology Officer</p>
               <p className="text-gray-600 text-sm">Driving technical excellence with expertise in emerging technologies and scalable solutions.</p>
             </motion.div>
 
@@ -159,13 +159,13 @@ const About = () => {
               variants={itemVariants}
             >
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80"
-                alt="Head of Development"
+                src="https://media.licdn.com/dms/image/v2/D5603AQHU40Y4gcLOOA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1722459499693?e=1756944000&v=beta&t=ZKNxMZD52-a6oUV3PzXO63RQTE8MxNYcaK9Vipbz6xc"
+                alt="Co-Founder & Head of AI"
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
               />
-              <h4 className="text-xl font-bold text-gray-900 mb-2">Omar Hassan</h4>
-              <p className="text-blue-600 font-medium mb-3">Head of Development</p>
-              <p className="text-gray-600 text-sm">Leading our development teams to deliver exceptional digital solutions with cutting-edge technologies.</p>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Odai Al-Absi</h4>
+              <p className="text-blue-600 font-medium mb-3">Co-Founder & Head of AI</p>
+              <p className="text-gray-600 text-sm">Leading our AI teams to deliver exceptional solutions with cutting-edge technologies.</p>
             </motion.div>
           </div>
         </motion.div>

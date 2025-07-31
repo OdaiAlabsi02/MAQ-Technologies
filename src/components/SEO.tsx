@@ -17,10 +17,10 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = 'WRLDS',
-  description = 'WRLDS Technologies: Pioneering smart engineering solutions with textile sensors for sports, safety, and performance monitoring.',
+  title = 'MAQ',
+  description = 'MAQ Technologies: Pioneering smart engineering solutions with textile sensors for sports, safety, and performance monitoring.',
   type = 'website',
-  name = 'WRLDS Technologies',
+  name = 'MAQ Technologies',
   imageUrl = '/lovable-uploads/48ecf6e2-5a98-4a9d-af6f-ae2265cd4098.png',
   publishDate,
   modifiedDate,
@@ -71,7 +71,7 @@ const SEO: React.FC<SEOProps> = ({
   const organizationStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'WRLDS Technologies',
+    name: 'MAQ Technologies',
     url: 'https://wrlds.com',
     logo: 'https://wrlds.com/lovable-uploads/14ea3fe0-19d6-425c-b95b-4117bc41f3ca.png',
     description: 'Pioneering smart engineering solutions with textile sensors',
@@ -105,12 +105,12 @@ const SEO: React.FC<SEOProps> = ({
     dateModified: modifiedDate || publishDate,
     author: {
       '@type': 'Organization',
-      name: author || 'WRLDS Technologies',
+      name: author || 'MAQ Technologies',
       url: 'https://wrlds.com'
     },
     publisher: {
       '@type': 'Organization',
-      name: 'WRLDS Technologies',
+      name: 'MAQ Technologies',
       logo: {
         '@type': 'ImageObject',
         url: 'https://wrlds.com/lovable-uploads/14ea3fe0-19d6-425c-b95b-4117bc41f3ca.png',

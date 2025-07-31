@@ -38,53 +38,53 @@ const Services = () => {
   const services = [
     {
       icon: Code,
-      title: "Web Development",
-      shortDesc: "Custom web applications built with modern technologies",
-      fullDesc: "We create responsive, scalable web applications using the latest frameworks and technologies. From simple websites to complex enterprise solutions, our web development services ensure optimal performance, security, and user experience.",
+      title: "Full Stack Development",
+      shortDesc: "End-to-end web and mobile application development",
+      fullDesc: "We deliver complete full stack solutions from frontend to backend, database design to deployment. Our full stack development services cover everything needed to bring your digital ideas to life with modern, scalable architectures.",
       features: [
-        "Responsive Design & Development",
-        "Progressive Web Applications (PWA)",
-        "E-commerce Solutions",
-        "Content Management Systems",
+        "Frontend & Backend Development",
+        "Database Design & Management",
         "API Development & Integration",
-        "Performance Optimization"
+        "Cloud Deployment & DevOps",
+        "Performance Optimization",
+        "Security Implementation"
       ],
-      technologies: ["React", "Next.js", "Node.js", "Python", "PHP", "MongoDB"],
-      startingPrice: "AED 15,000",
+      technologies: ["React", "Node.js", "Python", "PostgreSQL", "AWS", "Docker"],
+      startingPrice: "AED 20,000",
       color: "blue"
     },
     {
-      icon: Smartphone,
-      title: "Mobile App Development",
-      shortDesc: "Native and cross-platform mobile applications",
-      fullDesc: "Transform your ideas into powerful mobile applications. We develop native iOS and Android apps, as well as cross-platform solutions that deliver seamless user experiences across all devices.",
+      icon: Zap,
+      title: "AI Solutions",
+      shortDesc: "Intelligent automation and machine learning solutions",
+      fullDesc: "Leverage the power of artificial intelligence to transform your business operations. We develop custom AI solutions including machine learning models, natural language processing, computer vision, and intelligent automation systems.",
       features: [
-        "Native iOS & Android Development",
-        "Cross-platform Solutions (React Native)",
-        "UI/UX Design & Prototyping",
-        "App Store Optimization",
-        "Push Notifications & Analytics",
-        "Backend Integration"
+        "Machine Learning Model Development",
+        "Natural Language Processing",
+        "Computer Vision Solutions",
+        "Predictive Analytics",
+        "Intelligent Automation",
+        "AI Integration & APIs"
       ],
-      technologies: ["Swift", "Kotlin", "React Native", "Flutter", "Firebase", "AWS"],
-      startingPrice: "AED 25,000",
+      technologies: ["Python", "TensorFlow", "PyTorch", "OpenAI", "Azure AI", "AWS ML"],
+      startingPrice: "AED 35,000",
       color: "purple"
     },
     {
       icon: Globe,
-      title: "Digital Transformation",
-      shortDesc: "Complete digital transformation consulting and implementation",
-      fullDesc: "Guide your business through comprehensive digital transformation. We assess current systems, identify opportunities, and implement solutions that modernize operations and drive growth.",
+      title: "IT Consulting",
+      shortDesc: "Strategic technology guidance and digital transformation",
+      fullDesc: "Get expert IT consulting services to optimize your technology infrastructure, improve efficiency, and drive digital transformation. Our consultants provide strategic guidance for technology decisions and implementation.",
       features: [
-        "Digital Strategy Development",
-        "Legacy System Modernization",
-        "Cloud Migration Services",
-        "Process Automation",
-        "Data Analytics Implementation",
-        "Change Management Support"
+        "Technology Strategy Development",
+        "Infrastructure Assessment & Planning",
+        "Digital Transformation Roadmap",
+        "Vendor Selection & Management",
+        "Project Planning & Implementation",
+        "Technology ROI Analysis"
       ],
-      technologies: ["AWS", "Azure", "Google Cloud", "Salesforce", "Microsoft 365", "Tableau"],
-      startingPrice: "AED 50,000",
+      technologies: ["Enterprise Architecture", "Cloud Platforms", "DevOps", "Agile", "ITIL", "TOGAF"],
+      startingPrice: "AED 15,000",
       color: "green"
     },
     {
@@ -354,11 +354,21 @@ const Services = () => {
                   ))}
                 </div>
 
-                <button className={`w-full mt-8 py-3 px-6 rounded-lg font-semibold transition-all ${
-                  pkg.popular 
-                    ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                }`}>
+                <button 
+                  onClick={() => {
+                    const contactSection = document.getElementById('contact');
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                      });
+                    }
+                  }}
+                  className={`w-full mt-8 py-3 px-6 rounded-lg font-semibold transition-all ${
+                    pkg.popular 
+                      ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                  }`}>
                   Get Started
                 </button>
               </motion.div>

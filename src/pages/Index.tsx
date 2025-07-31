@@ -25,7 +25,7 @@ const Index = () => {
     <PageLayout>
       <SEO 
         title="MAQ - Technology Consulting & Development" 
-        description="MAQ is Dubai's premier technology consultant and development company, crafting innovative web and mobile solutions since 2025."
+        description="MAQ Technologies is Dubai's premier technology consultant and development company, crafting innovative web, mobile, and AI solutions."
         imageUrl="/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
         keywords={['technology consulting', 'web development', 'mobile apps', 'digital transformation', 'Dubai', 'UAE', 'software development']}
       />

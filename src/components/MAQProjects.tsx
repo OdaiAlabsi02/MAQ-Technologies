@@ -26,8 +26,8 @@ const MAQProjects = () => {
   const projects = [
     {
       title: "Dubai Smart City Portal",
-      category: "Web Development",
-      description: "Comprehensive digital platform for Dubai Municipality services, enabling citizens to access government services online with enhanced user experience.",
+      category: "Enterprise Portals",
+      description: "Comprehensive digital platform for city services, enabling citizens to access public services online with enhanced user experience.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
       technologies: ["React", "Node.js", "MongoDB", "AWS"],
       results: [
@@ -37,13 +37,13 @@ const MAQProjects = () => {
       ],
       timeline: "6 months",
       teamSize: "8 developers",
-      client: "Dubai Municipality",
+      client: "Dubai City Services",
       testimonial: "MAQ delivered exceptional results, transforming our digital services completely.",
       rating: 5
     },
     {
       title: "Emirates E-Commerce Platform",
-      category: "Mobile App",
+      category: "E-commerce",
       description: "Full-featured e-commerce mobile application for luxury retail brand with advanced features including AR try-on and AI-powered recommendations.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
       technologies: ["React Native", "Python", "TensorFlow", "Firebase"],
@@ -60,7 +60,7 @@ const MAQProjects = () => {
     },
     {
       title: "Healthcare Management System",
-      category: "Digital Transformation",
+      category: "Healthcare",
       description: "Complete digital transformation of healthcare operations including patient management, appointment scheduling, and telemedicine capabilities.",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
       technologies: ["Vue.js", "Laravel", "PostgreSQL", "Docker"],
@@ -77,7 +77,7 @@ const MAQProjects = () => {
     },
     {
       title: "FinTech Banking App",
-      category: "Fintech",
+      category: "FinTech",
       description: "Secure mobile banking application with advanced features including biometric authentication, cryptocurrency support, and AI fraud detection.",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
       technologies: ["Flutter", "Java", "Blockchain", "Machine Learning"],
@@ -125,15 +125,55 @@ const MAQProjects = () => {
       client: "UAE Education Ministry",
       testimonial: "Innovative platform that modernized education delivery across the UAE.",
       rating: 5
+    },
+    {
+      title: "Manufacturing ERP System",
+      category: "ERP Systems",
+      description: "Complete enterprise resource planning system for manufacturing with inventory management, production planning, and supply chain optimization.",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
+      technologies: ["React", "Node.js", "PostgreSQL", "Docker", "AWS"],
+      results: [
+        "60% process automation",
+        "40% cost reduction",
+        "Real-time inventory tracking"
+      ],
+      timeline: "12 months",
+      teamSize: "20 developers",
+      client: "UAE Manufacturing Group",
+      testimonial: "MAQ's ERP system transformed our entire manufacturing operations.",
+      rating: 5
+    },
+    {
+      title: "AI-Powered Customer Service",
+      category: "AI Solutions",
+      description: "Intelligent chatbot system with natural language processing for 24/7 customer support and automated issue resolution.",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
+      technologies: ["Python", "TensorFlow", "OpenAI API", "React", "NLP"],
+      results: [
+        "80% reduction in response time",
+        "95% customer satisfaction",
+        "24/7 automated support"
+      ],
+      timeline: "6 months",
+      teamSize: "10 AI specialists",
+      client: "Emirates Airlines",
+      testimonial: "Revolutionary AI solution that enhanced our customer experience significantly.",
+      rating: 5
     }
   ];
 
-  const categories = ["All", "Web Development", "Mobile App", "Digital Transformation", "Fintech", "IoT & Analytics", "EdTech"];
+  const categories = ["All", "ERP Systems", "AI Solutions", "E-commerce", "Enterprise Portals", "Healthcare", "FinTech", "IoT & Analytics", "EdTech"];
   const [activeCategory, setActiveCategory] = React.useState("All");
 
   const filteredProjects = activeCategory === "All" 
     ? projects 
     : projects.filter(project => project.category === activeCategory);
+
+  // Debug logging
+  console.log('Active Category:', activeCategory);
+  console.log('Filtered Projects Count:', filteredProjects.length);
+  console.log('All Projects Count:', projects.length);
+  console.log('Filtered Projects:', filteredProjects);
 
   return (
     <section id="projects" className="py-20 bg-white">
@@ -184,18 +224,19 @@ const MAQProjects = () => {
         </motion.div>
 
         {/* Projects Grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={containerVariants}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Debug info */}
+          <div className="col-span-full text-center text-sm text-gray-500 mb-4">
+            Showing {filteredProjects.length} of {projects.length} projects
+          </div>
+          {/* Test rendering */}
+          <div className="col-span-full text-center text-sm text-red-500 mb-4">
+            TEST: Projects should render below
+          </div>
           {filteredProjects.map((project, index) => (
-            <motion.div
-              key={index}
+            <div
+              key={`${project.title}-${activeCategory}`}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-              variants={itemVariants}
             >
               <div className="relative">
                 <img
@@ -272,10 +313,10 @@ const MAQProjects = () => {
                     <Github className="w-4 h-4 text-gray-600" />
                   </button>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+                             </div>
+             </div>
+           ))}
+         </div>
 
         {/* Call to Action */}
         <motion.div
@@ -291,9 +332,20 @@ const MAQProjects = () => {
           >
             <h3 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h3>
             <p className="text-xl mb-8 opacity-90">Let's discuss how we can bring your vision to life</p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Start Your Project
-            </button>
+                         <button 
+               onClick={() => {
+                 const contactSection = document.getElementById('contact');
+                 if (contactSection) {
+                   contactSection.scrollIntoView({ 
+                     behavior: 'smooth',
+                     block: 'start'
+                   });
+                 }
+               }}
+               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+             >
+               Start Your Project
+             </button>
           </motion.div>
         </motion.div>
       </div>

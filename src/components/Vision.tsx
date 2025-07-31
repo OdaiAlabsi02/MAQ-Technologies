@@ -140,8 +140,8 @@ const Vision = () => {
               variants={itemVariants}
             >
               <div className="text-4xl font-bold text-yellow-400 mb-2">2027</div>
-              <h4 className="font-semibold mb-2">AI Integration</h4>
-              <p className="text-sm text-gray-300">Leading AI-powered solution provider</p>
+              <h4 className="font-semibold mb-2">AI Excellence</h4>
+              <p className="text-sm text-gray-300">Establishing AI excellence center and thought leadership</p>
             </motion.div>
 
             <motion.div 
