@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
               
               <h2 className="text-2xl font-semibold mt-8 mb-4">1. Introduction</h2>
               <p className="text-gray-600 mb-4">
-                At WRLDS Technologies ("we," "our," or "us"), we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                At MAQ Technology ("we," "our," or "us"), we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our digital transformation services.
               </p>
               
               <h2 className="text-2xl font-semibold mt-8 mb-4">2. Information We Collect</h2>
@@ -32,12 +32,13 @@ const PrivacyPolicy = () => {
               </p>
               <ul className="list-disc pl-6 mb-4 text-gray-600">
                 <li>Contact us through our website</li>
-                <li>Subscribe to our newsletter</li>
-                <li>Register for our services</li>
-                <li>Participate in our surveys or promotions</li>
+                <li>Request a consultation for digital transformation services</li>
+                <li>Register for our technology solutions</li>
+                <li>Participate in our surveys or promotional events</li>
+                <li>Apply for career opportunities</li>
               </ul>
               <p className="text-gray-600 mb-4">
-                This information may include your name, email address, company name, phone number, and any other information you choose to provide.
+                This information may include your name, email address, company name, phone number, project requirements, and any other information you choose to provide.
               </p>
               
               <h2 className="text-2xl font-semibold mt-8 mb-4">3. How We Use Your Information</h2>
@@ -45,13 +46,14 @@ const PrivacyPolicy = () => {
                 We may use the information we collect for various purposes, including to:
               </p>
               <ul className="list-disc pl-6 mb-4 text-gray-600">
-                <li>Provide, operate, and maintain our services</li>
-                <li>Improve, personalize, and expand our services</li>
+                <li>Provide, operate, and maintain our digital transformation services</li>
+                <li>Improve, personalize, and expand our technology solutions</li>
                 <li>Understand and analyze how you use our services</li>
-                <li>Develop new products, services, features, and functionality</li>
+                <li>Develop new digital products, services, features, and functionality</li>
                 <li>Communicate with you about our services, updates, and other information</li>
-                <li>Process transactions and send related information</li>
+                <li>Process project requirements and send related information</li>
                 <li>Find and prevent fraud</li>
+                <li>Provide technical support and consultation</li>
               </ul>
               
               <h2 className="text-2xl font-semibold mt-8 mb-4">4. Cookies and Tracking Technologies</h2>
@@ -85,7 +87,7 @@ const PrivacyPolicy = () => {
               </p>
               
               <h2 className="text-2xl font-semibold mt-8 mb-4">10. Contact Us</h2>
-              <p className="text-gray-600 mb-4">If you have any questions about this Privacy Policy, please contact us at hello@wrlds.com</p>
+              <p className="text-gray-600 mb-4">If you have any questions about this Privacy Policy, please contact us at info@maqtechnology.com</p>
               
             </div>
           </div>

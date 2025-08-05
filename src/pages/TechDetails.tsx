@@ -42,7 +42,7 @@ const TechDetails = () => {
           }} transition={{
             duration: 0.5
           }} className="text-3xl sm:text-4xl font-bold mb-6">
-              Technical Deep Dive
+              MAQ Technology: Technical Philosophy & Innovation
             </motion.h1>
             
             <div className="prose prose-lg max-w-none">
@@ -54,7 +54,7 @@ const TechDetails = () => {
               duration: 0.5,
               delay: 0.2
             }} className="text-base sm:text-lg text-gray-600 mb-12">
-                Explore the technical details behind our smart textile sensor technology and learn how our system architecture enables rapid development and deployment.
+                At MAQ Technology, our technical strategy is rooted in our mission to empower organizations through innovative, scalable, and secure digital solutions. We believe that technology should be a catalyst for growth, efficiency, and transformation. Our architecture and engineering practices are designed to deliver robust, future-ready platforms that adapt to evolving business needs.
               </motion.p>
               
               {/* System Architecture Section */}
@@ -69,20 +69,13 @@ const TechDetails = () => {
             }} className="mb-16">
                 <div className="flex items-center gap-2 mb-4">
                   <FileText className="w-5 h-5 text-gray-700" />
-                  <h2 className="text-2xl font-bold">System Architecture</h2>
+                  <h2 className="text-2xl font-bold">Our Technology Stack & Architecture</h2>
                 </div>
                 
                 <p className="text-gray-600 mb-8 text-base max-w-3xl">
-                  Our platform uses a three-tier architecture connecting physical devices to our cloud services and user applications. 
-                  The diagram below illustrates how data flows through our system, from sensor collection to user-facing applications.
+                  We leverage a modular, cloud-native architecture that enables seamless integration, rapid deployment, and high scalability. Our stack includes modern frameworks, microservices, and AI-driven analytics, ensuring every solution is both resilient and adaptable. Security and data privacy are embedded at every layer, reflecting our commitment to integrity and trust.
                 </p>
 
-                {/* Progress bar showing flow */}
-                <div className="w-full mb-6">
-                  
-                  
-                </div>
-                
                 {/* Product Platform Architecture Diagram */}
                 <Card className="bg-white rounded-lg mb-10 border border-gray-200 shadow-sm">
                   <CardContent className="p-4 lg:p-6">
@@ -91,7 +84,7 @@ const TechDetails = () => {
                 </Card>
               </motion.div>
               
-              {/* Our Approach Section */}
+              {/* Innovation & Continuous Improvement Section */}
               <motion.div initial={{
               opacity: 0,
               y: 20
@@ -104,43 +97,42 @@ const TechDetails = () => {
             }}>
                 <div className="flex items-center gap-2 mb-4">
                   <Code className="w-5 h-5 text-gray-700" />
-                  <h2 className="text-2xl font-bold">Our Approach</h2>
+                  <h2 className="text-2xl font-bold">Innovation & Continuous Improvement</h2>
                 </div>
                 
                 <p className="text-gray-600 mb-8 text-base max-w-3xl">
-                  At WRLDS, we've developed a systematic approach to creating smart textile solutions that combines technical innovation with practical implementation. 
-                  Our comprehensive development process ensures that every project moves efficiently from concept to market-ready product.
+                  Our approach is driven by a culture of innovation and a relentless pursuit of excellence. We continuously explore emerging technologies—such as AI, IoT, and cloud automation—to deliver solutions that give our clients a competitive edge. Through agile methodologies and close client collaboration, we ensure every project is aligned with business goals and delivers measurable impact.
                 </p>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                   {[{
-                  title: "Discovery",
-                  icon: <Cpu className="w-5 h-5 text-gray-700" />,
-                  description: "We begin with thorough market research and requirements gathering to understand your specific needs and opportunities."
-                }, {
-                  title: "Design & Prototyping",
-                  icon: <Code className="w-5 h-5 text-gray-700" />,
-                  description: "Our teams create initial designs and functional prototypes that allow for early testing and iteration."
-                }, {
-                  title: "Development & Testing",
-                  icon: <FileText className="w-5 h-5 text-gray-700" />,
-                  description: "We rigorously develop and test all components to ensure they meet performance and reliability standards."
-                }].map((phase, i) => <motion.div key={phase.title} initial={{
-                  opacity: 0,
-                  y: 10
-                }} animate={{
-                  opacity: 1,
-                  y: 0
-                }} transition={{
-                  duration: 0.4,
-                  delay: 0.3 + i * 0.1
-                }} className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300">
-                      <div className="flex items-center gap-2 mb-3">
-                        {phase.icon}
-                        <h3 className="font-semibold text-lg">{phase.title}</h3>
-                      </div>
-                      <p className="text-gray-600 text-base">{phase.description}</p>
-                    </motion.div>)}
+                    title: "Agile Engineering",
+                    icon: <Cpu className="w-5 h-5 text-gray-700" />,
+                    description: "Iterative development cycles, rapid prototyping, and continuous feedback ensure our solutions evolve with your needs."
+                  }, {
+                    title: "Secure by Design",
+                    icon: <FileText className="w-5 h-5 text-gray-700" />,
+                    description: "Security and compliance are foundational, with proactive risk management and data protection at every stage."
+                  }, {
+                    title: "Client Partnership",
+                    icon: <Code className="w-5 h-5 text-gray-700" />,
+                    description: "We work as an extension of your team, fostering transparency, trust, and shared success."
+                  }].map((phase, i) => <motion.div key={phase.title} initial={{
+                    opacity: 0,
+                    y: 10
+                  }} animate={{
+                    opacity: 1,
+                    y: 0
+                  }} transition={{
+                    duration: 0.4,
+                    delay: 0.3 + i * 0.1
+                  }} className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300">
+                        <div className="flex items-center gap-2 mb-3">
+                          {phase.icon}
+                          <h3 className="font-semibold text-lg">{phase.title}</h3>
+                        </div>
+                        <p className="text-gray-600 text-base">{phase.description}</p>
+                      </motion.div>)}
                 </div>
               </motion.div>
             </div>

@@ -14,8 +14,8 @@ const ProductPlatform = () => {
       >
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Product</h2>
         <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-4xl">
-          5 years invested into tech focused end-to-end platform allowing customer brand to own pricing, branding, marketing and sales. Wrlds can help with all aspects of
-          product creation, certification, initial production and app development.
+          MAQ Technology delivers comprehensive digital transformation solutions through our end-to-end platform, enabling businesses to own their digital journey. We help with all aspects of
+          analysis, strategy, development, deployment, and ongoing optimization.
         </p>
       </motion.div>
 
@@ -29,17 +29,17 @@ const ProductPlatform = () => {
           className="flex-1"
         >
           <div className="bg-gray-200 rounded-xl p-4 sm:p-6">
-            <h3 className="text-lg sm:text-xl font-bold text-center mb-1">Physical Devices</h3>
-            <p className="text-xs sm:text-sm text-center mb-4">Data input</p>
+            <h3 className="text-lg sm:text-xl font-bold text-center mb-1">Analysis & Discovery</h3>
+            <p className="text-xs sm:text-sm text-center mb-4">Strategic input</p>
             
             <div className="space-y-3">
               {[
-                { icon: <Gauge className="text-black w-4 h-4 sm:w-5 sm:h-5" />, text: "Motion Sensors" },
-                { icon: <Cpu className="text-black w-4 h-4 sm:w-5 sm:h-5" />, text: "Heart Rate Sensors" },
-                { icon: <Bluetooth className="text-black w-4 h-4 sm:w-5 sm:h-5" />, text: "Wireless Connectivity" },
-                { icon: <Battery className="text-black w-4 h-4 sm:w-5 sm:h-5" />, text: "Power Management" },
-                { icon: <Database className="text-black w-4 h-4 sm:w-5 sm:h-5" />, text: "Local Storage" },
-                { icon: <Wifi className="text-black w-4 h-4 sm:w-5 sm:h-5" />, text: "Cellular Connection" }
+                { icon: <FileText className="text-black w-4 h-4 sm:w-5 sm:h-5" />, text: "Business Analysis" },
+                { icon: <Database className="text-black w-4 h-4 sm:w-5 sm:h-5" />, text: "Requirements Gathering" },
+                { icon: <Gauge className="text-black w-4 h-4 sm:w-5 sm:h-5" />, text: "Market Research" },
+                { icon: <Code className="text-black w-4 h-4 sm:w-5 sm:h-5" />, text: "Technical Assessment" },
+                { icon: <Cpu className="text-black w-4 h-4 sm:w-5 sm:h-5" />, text: "Process Mapping" },
+                { icon: <Server className="text-black w-4 h-4 sm:w-5 sm:h-5" />, text: "Infrastructure Review" }
               ].map((item, index) => (
                 <div key={index} className="bg-white rounded-lg p-3 sm:p-4 flex items-center">
                   <div className="mr-3 sm:mr-4 flex-shrink-0">{item.icon}</div>
@@ -49,7 +49,7 @@ const ProductPlatform = () => {
             </div>
             
             <p className="text-xs sm:text-sm text-center mt-4 sm:mt-6">
-              The hardware that collects data<br />from the physical world
+              Strategic analysis and discovery<br />to understand business needs
             </p>
           </div>
         </motion.div>
@@ -78,7 +78,7 @@ const ProductPlatform = () => {
         >
           <div className="bg-gray-200 rounded-xl p-4 sm:p-6">
             <div className="flex flex-col items-center mb-3 sm:mb-4">
-              <h3 className="text-xl sm:text-2xl font-bold text-center mb-0">wrlds</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-center mb-0">MAQ</h3>
               <p className="text-lg sm:text-xl font-medium text-center">Platform</p>
             </div>
             

@@ -122,22 +122,46 @@ const DevelopmentProcess = () => {
               Back to Home
             </Link>
             
-            <h1 className="text-4xl font-bold mb-8">Our Structured Development Process</h1>
+            <h1 className="text-4xl font-bold mb-8">Our Digital Transformation Process</h1>
             
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-gray-600 mb-12">
-                We've refined our development methodology to minimize risk and maximize innovation, 
-                ensuring your textile sensor project moves efficiently from concept to reality.
+                At MAQ Technology, our development process is designed to turn vision into reality through a blend of strategic planning, agile execution, and continuous improvement. We partner closely with our clients to deliver solutions that are innovative, secure, and tailored to their unique business goals.
               </p>
               
-              {/* From Textile to Intelligence Process Section */}
+              {/* MAQ Digital Transformation Process Section */}
               <div className="relative mt-12" ref={processRef} style={{
               opacity: 0
             }}>
                 <div className="hidden md:block absolute top-0 left-1/2 w-0.5 h-full bg-gray-200 -translate-x-1/2"></div>
                 
                 <div className="space-y-10 relative">
-                  {processes.map((process, index) => <div key={process.id} ref={el => processSectionsRef.current[index] = el} className={cn("relative flex flex-col md:flex-row md:items-center gap-6", index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse text-right")}>
+                  {[{
+                    id: 1,
+                    title: "Strategic Discovery",
+                    description: "We start by deeply understanding your business, industry, and objectives to define a clear roadmap for digital transformation.",
+                    steps: ["Stakeholder interviews & workshops", "Market & competitor analysis", "Business goal alignment", "Success metrics definition"]
+                  }, {
+                    id: 2,
+                    title: "Solution Design",
+                    description: "Our experts architect scalable, secure, and user-centric solutions, leveraging the latest technologies to meet your needs.",
+                    steps: ["Technical architecture planning", "UX/UI prototyping", "Technology stack selection", "Security & compliance review"]
+                  }, {
+                    id: 3,
+                    title: "Agile Development",
+                    description: "We build and iterate rapidly, using agile methodologies to ensure flexibility, transparency, and continuous client feedback.",
+                    steps: ["Sprint planning & execution", "Regular demos & reviews", "Automated testing & QA", "Iterative improvements"]
+                  }, {
+                    id: 4,
+                    title: "Deployment & Enablement",
+                    description: "We ensure a smooth launch, provide training, and empower your team to maximize the value of your new digital solution.",
+                    steps: ["Go-live planning & rollout", "User onboarding & training", "Performance monitoring", "Post-launch support"]
+                  }, {
+                    id: 5,
+                    title: "Growth & Optimization",
+                    description: "Our partnership continues with ongoing support, analytics, and enhancements to drive sustained business growth.",
+                    steps: ["KPI tracking & reporting", "Continuous improvement cycles", "Feature expansion", "Strategic technology advisory"]
+                  }].map((process, index) => <div key={process.id} ref={el => processSectionsRef.current[index] = el} className={cn("relative flex flex-col md:flex-row md:items-center gap-6", index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse text-right")}> 
                       <div className="md:w-1/2">
                         <div className={cn("md:absolute top-0 left-1/2 md:-translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center z-10 transition-all duration-300", activeProcess === process.id ? "bg-gray-700 text-white scale-110" : "bg-white text-gray-700 border border-gray-300")} onClick={() => setActiveProcess(process.id)}>
                           <span className="font-bold">{process.id}</span>
@@ -146,7 +170,7 @@ const DevelopmentProcess = () => {
                         <h3 className="text-xl font-bold mb-2 mt-3 md:mt-0">{process.title}</h3>
                         <p className="text-gray-600 mb-3 text-sm">{process.description}</p>
                         
-                        <button onClick={() => setActiveProcess(process.id)} className={cn("text-sm font-medium transition-colors", activeProcess === process.id ? "text-gray-700" : "text-gray-500 hover:text-gray-700")}>
+                        <button onClick={() => setActiveProcess(process.id)} className={cn("text-sm font-medium transition-colors", activeProcess === process.id ? "text-gray-700" : "text-gray-500 hover:text-gray-700")}> 
                           {activeProcess === process.id ? "Currently Viewing" : "View Details"}
                         </button>
                       </div>
@@ -167,32 +191,30 @@ const DevelopmentProcess = () => {
               </div>
               
               <div className="bg-gray-50 p-8 rounded-lg my-12 border border-gray-100">
-                <h3 className="text-xl font-semibold mb-4">Our Development Principles</h3>
+                <h3 className="text-xl font-semibold mb-4">Our Guiding Principles</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
-                    <span>Rapid iteration cycles for continuous improvement</span>
+                    <span>Client success is our top priority</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
-                    <span>Transparent communication throughout the development process</span>
+                    <span>Innovation and agility drive every project</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
-                    <span>Modular architecture allowing for flexible and scalable solutions</span>
+                    <span>Integrity and transparency in all communications</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
-                    <span>Risk mitigation strategies built into every phase</span>
+                    <span>Continuous learning and improvement</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
-                    <span>Focus on user experience and practical functionality</span>
+                    <span>Long-term partnership and shared growth</span>
                   </li>
                 </ul>
               </div>
-              
-              
             </div>
             
             <div className="mt-12 pt-8 border-t border-gray-200">
